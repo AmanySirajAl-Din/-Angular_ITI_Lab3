@@ -8,6 +8,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ProductCardComponent implements OnInit {
   @Input() productCard: any = [];
   @Output() sendproductCard = new EventEmitter();
+
+  testViewChild: string = "I'm the child";
+
   constructor() {}
 
   ngOnInit(): void {}

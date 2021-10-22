@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ProductCardComponent } from '../product-card/product-card.component';
 
 @Component({
   selector: 'app-product-list',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
-  products_array = [
+  @ViewChild(ProductCardComponent) card: any = []; // import ProductCardComponent
+
+  products_array: Array<object> = [
     {
       id: 1,
       title: 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops',
@@ -280,5 +283,10 @@ export class ProductListComponent implements OnInit {
 
   receiveproductCard(product: object) {
     console.log(product);
+  }
+
+  ngAfterViewInit() {
+    // this function waits for child to render
+    console.log(this.card.testViewChild);
   }
 }

@@ -36,3 +36,7 @@
             ● sendMessage() {this.messageEvent.emit(this.message)} - Child.ts
             this.sendproductCard.emit(this.productCard); // emit fun sends data to the parent
             ● <button (click)="sendMessage()">Send Message</button> - Child.html
+
+        OR Use
+            @ViewChild(ChildComponent) child;
+            // To inject the child in the parent
