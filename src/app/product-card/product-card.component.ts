@@ -10,4 +10,8 @@ export class ProductCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  addToCartFun() {
+    console.log(this.productCard);
+  }
 }
