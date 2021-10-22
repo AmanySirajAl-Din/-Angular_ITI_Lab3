@@ -1,0 +1,5 @@
+- Generate main components
+    - Navbar: >>ng g c navbar
+    - Product-list: >>ng g c product-list
+    - Product-card: >>ng g c product-card
+
