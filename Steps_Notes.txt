@@ -28,4 +28,11 @@
             <p class="green-colored">In Stock</p>
         </ng-template>
 
-    - 
+    - Send data from product-card(child) to product-list(parent)
+        Example : 
+            ● <app-child (messageEvent)="receiveMessage($event)"></app-child> - parent
+            ● receiveMessage($event) {this.message = $event}- parent.ts
+            ● @Output() messageEvent = new EventEmitter<string>();- Child.ts
+            ● sendMessage() {this.messageEvent.emit(this.message)} - Child.ts
+            this.sendproductCard.emit(this.productCard); // emit fun sends data to the parent
+            ● <button (click)="sendMessage()">Send Message</button> - Child.html

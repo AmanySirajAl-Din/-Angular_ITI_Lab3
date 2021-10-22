@@ -277,4 +277,8 @@ export class ProductListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  receiveproductCard(product: object) {
+    console.log(product);
+  }
 }

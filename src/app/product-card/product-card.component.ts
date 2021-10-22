@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
@@ -7,11 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProductCardComponent implements OnInit {
   @Input() productCard: any = [];
+  @Output() sendproductCard = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
 
   addToCartFun() {
-    console.log(this.productCard);
+    //console.log(this.productCard);
+    this.sendproductCard.emit(this.productCard); // emit fun sends data to the parent
   }
 }
