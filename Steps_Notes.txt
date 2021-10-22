@@ -6,3 +6,12 @@
 - Create product_array in product-list components [attached]
 
 - Render Products cards from the provided products_array
+    -in product-list component
+        <div class="col" *ngFor="let product of products_array; let i = index">
+            <app-product-card [productCard]="product"></app-product-card>
+        </div>
+    -in product-card component
+        import { ...., Input } from '@angular/core'; // First, import Input
+        export class ProductCardComponent {
+            @Input() productCard = {}; // decorate the property with @Input()
+        }
