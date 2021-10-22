@@ -3,3 +3,6 @@
     - Product-list: >>ng g c product-list
     - Product-card: >>ng g c product-card
 
+- Create product_array in product-list components [attached]
+
+- Render Products cards from the provided products_array
