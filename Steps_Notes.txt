@@ -18,3 +18,15 @@
 
         THEN ..
         Use productCard objects to show each product data
+
+    - Count_in_stock condition as requested
+        (Using ngIf and ng-template)
+        <div *ngIf="productCard.rating.count_in_stock == 0; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+            <p class="red-colored">Out of Stock</p>
+        </ng-template>
+        <ng-template #elseBlock>
+            <p class="green-colored">In Stock</p>
+        </ng-template>
+
+    - 
