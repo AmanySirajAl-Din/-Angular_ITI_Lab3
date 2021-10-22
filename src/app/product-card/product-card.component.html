@@ -9,13 +9,22 @@
             <ng-template [ngIf]="productCard.rating.count_in_stock > 0">In Stock</ng-template>
         </p> -->
         <!-- Better way -->
-        <div *ngIf="productCard.rating.count_in_stock == 0; then thenBlock else elseBlock"></div>
+        <!-- <div *ngIf="productCard.rating.count_in_stock == 0; then thenBlock else elseBlock"></div>
         <ng-template #thenBlock>
             <p class="red-colored">Out of Stock</p>
         </ng-template>
         <ng-template #elseBlock>
             <p class="green-colored">In Stock</p>
+        </ng-template> -->
+
+        <!-- Best way -->
+        <p class="red-colored" *ngIf="productCard.rating.count_in_stock == 0; else elseBlock">
+            Out of Stock
+        </p>
+        <ng-template #elseBlock>
+            <p class="green-colored">In Stock</p>
         </ng-template>
+
         <button class="btn btn-primary">Add to Cart</button>
     </div>
 </div>
