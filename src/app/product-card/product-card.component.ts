@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./product-card.component.css'],
 })
 export class ProductCardComponent implements OnInit {
-  @Input() productCard = {};
+  @Input() productCard: any = [];
   constructor() {}
 
   ngOnInit(): void {}

@@ -13,5 +13,8 @@
     -in product-card component
         import { ...., Input } from '@angular/core'; // First, import Input
         export class ProductCardComponent {
-            @Input() productCard = {}; // decorate the property with @Input()
+            @Input() productCard: any = []; // decorate the property with @Input()
         }
+
+        THEN ..
+        Use productCard objects to show each product data
