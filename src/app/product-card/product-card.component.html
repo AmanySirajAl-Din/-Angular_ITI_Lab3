@@ -3,7 +3,7 @@
     <div class="card-body">
         <h5 class="card-title">{{ productCard.title }}</h5>
         <p class="card-text">{{ productCard.category }}</p>
-        <p class="card-text">{{ productCard.price }}</p>
+        <p class="card-text">{{ productCard.price | currency: 'EGP' }}</p>
         <!-- <p class="card-text" [ngClass]="productCard.rating.count_in_stock == 0 ? 'red-colored' : 'green-colored'">
             <ng-template [ngIf]="productCard.rating.count_in_stock == 0">Out of Stock</ng-template>
             <ng-template [ngIf]="productCard.rating.count_in_stock > 0">In Stock</ng-template>

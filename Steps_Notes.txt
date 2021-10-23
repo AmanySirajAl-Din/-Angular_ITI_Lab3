@@ -40,3 +40,6 @@
         OR Use
             @ViewChild(ChildComponent) child;
             // To inject the child in the parent
+
+    - Currancy Pipe
+        {{value | currency: 'EGP'}}
